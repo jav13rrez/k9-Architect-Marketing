@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #141518; }
+  a { color: #ef4444; text-decoration: none; }
+  a:hover { color: #f87171; }
+</style>
+</helmet>
+
+<section style="padding: 48px; display: flex; flex-direction: column; gap: 24px; font-family: 'Space Grotesk', system-ui, sans-serif;">
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #ef4444;">Turn 1 — Wordmark, no glyph</div>
+    <div style="font-size: 15px; color: #909399; max-width: 620px;">Four typographic lockups for K9 Architect. Each shown large, then at UI scale (sidebar header) and as a square mark using type only.</div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start;">
+
+    <div id="1a" style="width: 520px; background: #25262b; border: 1px solid #373a40; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #ef4444; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 999px; padding: 3px 10px;">1A</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c6f76;">Inline · weight contrast</div>
+      </div>
+      <div style="padding: 32px 8px; display: flex; align-items: baseline;">
+        <span style="font-size: 52px; font-weight: 700; letter-spacing: -0.03em; color: #f1f2f4;">K</span>
+        <span style="font-size: 52px; font-weight: 700; letter-spacing: -0.03em; color: #ef4444;">9</span>
+        <span style="width: 14px;"></span>
+        <span style="font-size: 52px; font-weight: 300; letter-spacing: -0.03em; color: #909399;">Architect</span>
+      </div>
+      <div style="height: 1px; background: #373a40;"></div>
+      <div style="display: flex; align-items: center; gap: 28px;">
+        <div style="display: flex; align-items: baseline;">
+          <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #f1f2f4;">K</span>
+          <span style="font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #ef4444;">9</span>
+          <span style="width: 5px;"></span>
+          <span style="font-size: 19px; font-weight: 300; letter-spacing: -0.02em; color: #909399;">Architect</span>
+        </div>
+        <div style="width: 40px; height: 40px; border-radius: 8px; background: #1a1b1e; border: 1px solid #373a40; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 17px; font-weight: 700; letter-spacing: -0.04em; color: #f1f2f4;">K</span><span style="font-size: 17px; font-weight: 700; letter-spacing: -0.04em; color: #ef4444;">9</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="1b" style="width: 520px; background: #25262b; border: 1px solid #373a40; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #ef4444; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 999px; padding: 3px 10px;">1B</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c6f76;">Stacked · mono baseline</div>
+      </div>
+      <div style="padding: 24px 8px; display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline;">
+          <span style="font-size: 60px; font-weight: 700; letter-spacing: -0.045em; color: #f1f2f4;">K</span>
+          <span style="font-size: 60px; font-weight: 700; letter-spacing: -0.045em; color: #ef4444;">9</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 17px; font-weight: 500; letter-spacing: 0.315em; color: #909399;">ARCHITECT</div>
+      </div>
+      <div style="height: 1px; background: #373a40;"></div>
+      <div style="display: flex; align-items: center; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 1px;">
+          <div style="display: flex; align-items: baseline;">
+            <span style="font-size: 22px; font-weight: 700; letter-spacing: -0.045em; color: #f1f2f4;">K</span>
+            <span style="font-size: 22px; font-weight: 700; letter-spacing: -0.045em; color: #ef4444;">9</span>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 500; letter-spacing: 0.235em; color: #909399;">ARCHITECT</div>
+        </div>
+        <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.35); display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 17px; font-weight: 700; letter-spacing: -0.05em; color: #f1f2f4;">K</span><span style="font-size: 17px; font-weight: 700; letter-spacing: -0.05em; color: #ef4444;">9</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+    <div style="width: 520px; background: #fefefe; border: 1px solid #e2e3e4; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8d94;">Light mode check</div>
+      <div style="display: flex; align-items: baseline;">
+        <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; color: #1a1b1e;">K</span>
+        <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; color: #ef4444;">9</span>
+        <span style="width: 9px;"></span>
+        <span style="font-size: 34px; font-weight: 300; letter-spacing: -0.03em; color: #6c6f76;">Architect</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <div style="display: flex; align-items: baseline;">
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.045em; color: #1a1b1e;">K</span>
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.045em; color: #ef4444;">9</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.29em; color: #6c6f76;">ARCHITECT</div>
+      </div>
+    </div>
+
+    <div style="width: 520px; background: #25262b; border: 1px solid #373a40; border-radius: 8px; padding: 0; display: flex; overflow: hidden;">
+      <div style="width: 190px; background: #1a1b1e; border-right: 1px solid #373a40; padding: 20px 16px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 1px;">
+          <div style="display: flex; align-items: baseline;">
+            <span style="font-size: 21px; font-weight: 700; letter-spacing: -0.045em; color: #f1f2f4;">K</span>
+            <span style="font-size: 21px; font-weight: 700; letter-spacing: -0.045em; color: #ef4444;">9</span>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 500; letter-spacing: 0.235em; color: #909399;">ARCHITECT</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 13px; color: #ef4444; background: rgba(239,68,68,0.1); border: 1px solid #ef4444; border-radius: 8px; padding: 7px 10px;">Kennel Overview</div>
+          <div style="font-size: 13px; color: #909399; padding: 7px 10px;">Session Log</div>
+          <div style="font-size: 13px; color: #909399; padding: 7px 10px;">Protocol Library</div>
+        </div>
+      </div>
+      <div style="flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 10px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c6f76;">In situ · sidebar header (1B)</div>
+        <div style="height: 10px; width: 70%; background: #2f3035; border-radius: 4px;"></div>
+        <div style="height: 10px; width: 45%; background: #2f3035; border-radius: 4px;"></div>
+        <div style="height: 10px; width: 58%; background: #2f3035; border-radius: 4px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

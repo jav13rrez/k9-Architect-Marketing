@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; }
+  .swatch { display: flex; flex-direction: column; gap: 6px; }
+  .color-block { height: 56px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+  .label { font: var(--data-xs); color: #909399; }
+  .hex   { font: var(--data-xs); color: #636670; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .wide { width: 120px; }
+  .narrow { width: 72px; }
+</style>
+</head>
+<body>
+<div class="section-label">Dark Mode Surfaces</div>
+<div class="row">
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#1a1b1e; border-color: rgba(255,255,255,0.08)"></div>
+    <span class="label">bg-page</span>
+    <span class="hex">#1a1b1e — slate-900</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#1e1f24"></div>
+    <span class="label">bg-sidebar</span>
+    <span class="hex">#1e1f24 — slate-850</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#25262b"></div>
+    <span class="label">bg-card</span>
+    <span class="hex">#25262b — slate-800</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#2c2e33"></div>
+    <span class="label">bg-elevated</span>
+    <span class="hex">#2c2e33 — slate-750</span>
+  </div>
+  <div class="swatch narrow">
+    <div class="color-block narrow" style="background:#373a40"></div>
+    <span class="label">border</span>
+    <span class="hex">#373a40</span>
+  </div>
+  <div class="swatch narrow">
+    <div class="color-block narrow" style="background:#4c4f56"></div>
+    <span class="label">border-strong</span>
+    <span class="hex">#4c4f56</span>
+  </div>
+</div>
+</body>
+</html>

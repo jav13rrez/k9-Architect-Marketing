@@ -1,0 +1,372 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <!-- Colores y Estilos Base -->
+    <style>
+      .bg { fill: #1c212a; }
+      .grid-line { stroke: #2a3542; stroke-width: 1; }
+      .grid-bold { stroke: #364453; stroke-width: 1.5; }
+      .border-main { stroke: #455a6f; stroke-width: 2; fill: none; }
+      
+      .line-main { stroke: #7fa8c7; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line-thin { stroke: #5b809d; stroke-width: 1; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line-dashed { stroke: #5b809d; stroke-width: 1; fill: none; stroke-dasharray: 6 4; }
+      .line-dim { stroke: #455a6f; stroke-width: 1; fill: none; }
+      
+      .fill-subtle { fill: #2a3a48; fill-opacity: 0.5; }
+      .fill-solid { fill: #1c212a; }
+      .dot { fill: #7fa8c7; }
+    </style>
+
+    <!-- Patrones de Cuadrícula -->
+    <pattern id="grid-small" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="none" class="grid-line" opacity="0.5"/>
+    </pattern>
+    <pattern id="grid-large" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="none" class="grid-bold" opacity="0.7"/>
+    </pattern>
+
+    <!-- Marcadores (Flechas y cruces) -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#5b809d" />
+    </marker>
+    <marker id="cross" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 5 1 L 5 9 M 1 5 L 9 5" stroke="#5b809d" stroke-width="1" />
+    </marker>
+  </defs>
+
+  <!-- FONDO Y CUADRÍCULA -->
+  <rect width="1280" height="720" class="bg" />
+  <rect width="1280" height="720" fill="url(#grid-small)" />
+  <rect width="1280" height="720" fill="url(#grid-large)" />
+  
+  <!-- Marco Exterior -->
+  <rect x="20" y="20" width="1240" height="680" class="border-main" />
+
+  <!-- LÍNEAS DE GUÍA GENERALES (Criss-crossing the blueprint) -->
+  <g class="line-dim">
+    <line x1="20" y1="200" x2="1260" y2="200" />
+    <line x1="20" y1="560" x2="1260" y2="560" />
+    <line x1="350" y1="20" x2="350" y2="700" />
+    <line x1="850" y1="20" x2="850" y2="700" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- FILA SUPERIOR (De Izquierda a Derecha) -->
+  <!-- ========================================== -->
+
+  <!-- 1. Componente Mecánico Izquierdo -->
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="200" height="75" rx="37.5" class="line-main" />
+    <line x1="-15" y1="37.5" x2="215" y2="37.5" class="line-thin" />
+    
+    <!-- Lente/Sensor izquierdo -->
+    <circle cx="50" cy="37.5" r="25" class="line-main" />
+    <circle cx="50" cy="37.5" r="15" class="line-main" />
+    <circle cx="50" cy="37.5" r="5" class="line-thin" />
+    <line x1="50" y1="0" x2="50" y2="75" class="line-thin" />
+    
+    <!-- Bobina central -->
+    <rect x="90" y="20" width="40" height="35" class="line-thin" />
+    <path d="M 90 20 L 95 55 M 95 20 L 100 55 M 100 20 L 105 55 M 105 20 L 110 55 M 110 20 L 115 55 M 115 20 L 120 55 M 120 20 L 125 55" class="line-main" />
+    
+    <!-- Estructura derecha -->
+    <rect x="140" y="15" width="40" height="45" rx="5" class="line-thin" />
+    <path d="M 170 25 C 185 25, 185 50, 170 50" class="line-main" />
+    
+    <!-- Brackets exteriores -->
+    <path d="M 0 15 L -10 15 L -10 60 L 0 60" class="line-thin" />
+    <path d="M 200 25 L 210 25 L 210 50 L 200 50" class="line-thin" />
+  </g>
+
+  <!-- 2. Cerebro y Neuronas -->
+  <g transform="translate(280, 75)">
+    <!-- Neurona Izquierda -->
+    <g transform="translate(-10, -20) scale(0.7)">
+      <path d="M 0 0 L -15 -10 M 0 0 L -10 15 M 0 0 L 15 -5 M 0 0 L 10 10 M 0 0 L -20 0" class="line-thin" />
+      <circle cx="0" cy="0" r="4" class="dot" />
+      <path d="M 0 0 Q 20 20 35 40" class="line-dashed" />
+    </g>
+    <!-- Neurona Derecha -->
+    <g transform="translate(100, -25) scale(0.8)">
+      <path d="M 0 0 L -10 -15 M 0 0 L 15 -10 M 0 0 L 5 15 M 0 0 L 15 10 M 0 0 L -15 5" class="line-thin" />
+      <circle cx="0" cy="0" r="4" class="dot" />
+      <path d="M 0 0 Q -20 20 -40 40" class="line-dashed" />
+    </g>
+    
+    <!-- Silueta del Cerebro -->
+    <path d="M 10 30 C 5 10, 30 -5, 50 -5 C 70 -5, 90 10, 80 30 C 95 35, 100 55, 85 70 C 75 80, 60 75, 50 85 C 40 75, 20 85, 10 70 C -5 60, -5 40, 10 30 Z" class="line-main" />
+    
+    <!-- Pliegues internos (Surcos) -->
+    <path d="M 25 15 Q 40 25 50 15 T 70 20" class="line-thin" />
+    <path d="M 15 45 Q 35 40 45 55 T 65 45 Q 75 60 85 50" class="line-thin" />
+    <path d="M 30 65 Q 45 75 55 60" class="line-thin" />
+    <path d="M 50 -5 Q 45 25 55 45 T 50 85" class="line-dashed" opacity="0.6"/>
+  </g>
+
+  <!-- 3. Elemento en U (Magnético/Medición) -->
+  <g transform="translate(435, 50)">
+    <path d="M 10 0 L 10 50 C 10 70, 30 80, 50 80 C 70 80, 90 70, 90 50 L 90 0 L 65 0 L 65 45 C 65 55, 55 60, 50 60 C 45 60, 35 55, 35 45 L 35 0 Z" class="line-main" />
+    <line x1="50" y1="-10" x2="50" y2="95" class="line-dim" />
+    <!-- Líneas de relleno / cota -->
+    <line x1="10" y1="10" x2="35" y2="10" class="line-thin" />
+    <line x1="10" y1="20" x2="35" y2="20" class="line-thin" />
+    <line x1="65" y1="10" x2="90" y2="10" class="line-thin" />
+    <line x1="65" y1="20" x2="90" y2="20" class="line-thin" />
+  </g>
+
+  <!-- 4. Componente Mecánico Centro-Derecha -->
+  <g transform="translate(610, 55)">
+    <rect x="0" y="0" width="160" height="60" rx="30" class="line-main" />
+    <!-- Resorte izquierdo -->
+    <rect x="25" y="15" width="30" height="30" class="line-thin" />
+    <path d="M 25 15 L 30 45 M 30 15 L 35 45 M 35 15 L 40 45 M 40 15 L 45 45 M 45 15 L 50 45 M 50 15 L 55 45" class="line-main" />
+    
+    <!-- Eje central -->
+    <line x1="-20" y1="30" x2="180" y2="30" class="line-thin" />
+    <line x1="55" y1="30" x2="100" y2="30" class="line-main" />
+    
+    <!-- Círculos derechos -->
+    <circle cx="115" cy="30" r="20" class="line-main" />
+    <circle cx="115" cy="30" r="10" class="line-thin" />
+    
+    <!-- Corchetes laterales -->
+    <path d="M 0 20 L -10 20 L -10 40 L 0 40" class="line-thin" />
+    <path d="M 160 20 L 170 20 L 170 40 L 160 40" class="line-thin" />
+  </g>
+
+  <!-- 5. Objetivos / Crosshairs -->
+  <g transform="translate(860, 85)">
+    <circle cx="0" cy="0" r="25" class="line-main" />
+    <line x1="-35" y1="0" x2="35" y2="0" class="line-thin" />
+    <line x1="0" y1="-35" x2="0" y2="35" class="line-thin" />
+    <!-- Ticks -->
+    <line x1="-15" y1="-5" x2="-15" y2="5" class="line-dim" />
+    <line x1="15" y1="-5" x2="15" y2="5" class="line-dim" />
+    <line x1="-5" y1="-15" x2="5" y2="-15" class="line-dim" />
+    <line x1="-5" y1="15" x2="5" y2="15" class="line-dim" />
+  </g>
+  
+  <g transform="translate(970, 85)">
+    <circle cx="0" cy="0" r="25" class="line-main" />
+    <circle cx="0" cy="0" r="12" class="line-thin" />
+    <line x1="-35" y1="0" x2="35" y2="0" class="line-thin" />
+    <line x1="0" y1="-35" x2="0" y2="35" class="line-thin" />
+    <circle cx="0" cy="0" r="3" class="dot" />
+  </g>
+
+  <!-- 6. Forma de Onda (Arriba Derecha) -->
+  <g transform="translate(1060, 85)">
+    <line x1="0" y1="0" x2="200" y2="0" class="line-dim" />
+    <path d="M 10 0 L 40 0 L 60 -35 L 80 40 L 105 -50 L 130 35 L 145 -15 L 160 0 L 190 0" class="line-main" stroke-linejoin="miter" />
+    <!-- Cotas -->
+    <line x1="60" y1="-45" x2="60" y2="50" class="line-dim" />
+    <line x1="105" y1="-60" x2="105" y2="60" class="line-dashed" />
+    <line x1="130" y1="-45" x2="130" y2="50" class="line-dim" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- ÁREA CENTRAL (Interpolada y revelada) -->
+  <!-- ========================================== -->
+
+  <!-- Diagrama Óptico (Corte de Lente de Cámara) - Interpolado -->
+  <g transform="translate(240, 360)">
+    <!-- Eje óptico -->
+    <line x1="-180" y1="0" x2="180" y2="0" class="line-dashed" />
+    
+    <!-- Elementos del objetivo (Lentes) -->
+    <!-- Lente frontal (Convexa-cóncava) -->
+    <path d="M -120 -80 C -80 -80, -80 80, -120 80 C -100 40, -100 -40, -120 -80" class="line-main" fill="#1c212a" />
+    <!-- Grupo central 1 -->
+    <path d="M -50 -50 C -30 -50, -30 50, -50 50 C -70 50, -70 -50, -50 -50" class="line-main" fill="#1c212a" />
+    <!-- Grupo central 2 (Bicóncava) -->
+    <path d="M -10 -40 C 10 -40, 10 40, -10 40 C -25 40, -25 -40, -10 -40" class="line-thin" />
+    <!-- Elemento trasero -->
+    <path d="M 60 -30 C 80 -30, 80 30, 60 30 C 45 30, 45 -30, 60 -30" class="line-main" fill="#1c212a" />
+    
+    <!-- Barril del objetivo (Carcasa) -->
+    <path d="M -140 -90 L -120 -90 L -100 -60 L 80 -40 L 80 -100" class="line-thin" />
+    <path d="M -140 90 L -120 90 L -100 60 L 80 40 L 80 100" class="line-thin" />
+    
+    <!-- Rayos de luz -->
+    <path d="M -180 -70 L -100 -30 L 0 0 L 100 30" class="line-dim" />
+    <path d="M -180 70 L -100 30 L 0 0 L 100 -30" class="line-dim" />
+    <path d="M -180 0 L 100 0" class="line-dim" />
+  </g>
+
+  <!-- Puntos focales y diagramas derechos (Detrás de donde estaba la tarjeta) -->
+  <g transform="translate(1120, 250)">
+    <line x1="-150" y1="0" x2="80" y2="0" class="line-dashed" />
+    <circle cx="0" cy="0" r="30" class="line-main" />
+    <circle cx="0" cy="0" r="15" class="line-thin" />
+    <!-- Plano focal -->
+    <line x1="0" y1="-60" x2="0" y2="60" class="line-main" />
+    <line x1="30" y1="-40" x2="30" y2="40" class="line-thin" />
+  </g>
+
+  <g transform="translate(930, 430)">
+    <line x1="-15" y1="0" x2="15" y2="0" class="line-thin" />
+    <line x1="0" y1="-15" x2="0" y2="15" class="line-thin" />
+    <circle cx="0" cy="0" r="15" class="line-dashed" />
+    <!-- Líneas apuntando al perro -->
+    <line x1="10" y1="10" x2="150" y2="120" class="line-dim" marker-end="url(#arrow)" />
+  </g>
+
+  <g transform="translate(1200, 480)">
+    <circle cx="0" cy="0" r="20" class="line-main" />
+    <line x1="-30" y1="0" x2="30" y2="0" class="line-thin" />
+    <line x1="0" y1="-30" x2="0" y2="30" class="line-thin" />
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- FILA INFERIOR (De Izquierda a Derecha) -->
+  <!-- ========================================== -->
+
+  <!-- 7. Gran Ensamblaje Mecánico (Abajo Izquierda) -->
+  <g transform="translate(60, 600)">
+    <!-- Carcasa exterior extendida (Completando la forma oculta) -->
+    <rect x="0" y="0" width="300" height="80" rx="40" class="line-main" />
+    
+    <!-- Elementos Izquierdos -->
+    <path d="M 20 40 L 60 40" class="line-thin" />
+    <rect x="40" y="25" width="40" height="30" rx="5" class="line-thin" />
+    <circle cx="60" cy="40" r="8" class="line-main" />
+    
+    <!-- Sección Central (Bobina/Engranaje) -->
+    <rect x="110" y="20" width="70" height="40" class="line-thin" />
+    <path d="M 115 20 L 120 60 M 125 20 L 130 60 M 135 20 L 140 60 M 145 20 L 150 60 M 155 20 L 160 60 M 165 20 L 170 60" class="line-main" />
+    <line x1="-30" y1="40" x2="330" y2="40" class="line-thin" />
+    
+    <!-- Elementos Derechos (Círculos concéntricos) -->
+    <circle cx="230" cy="40" r="25" class="line-main" />
+    <circle cx="230" cy="40" r="15" class="line-thin" />
+    <circle cx="230" cy="40" r="5" class="line-main" fill="#1c212a" />
+    <path d="M 180 30 L 205 30 M 180 50 L 205 50" class="line-thin" />
+    
+    <!-- Cotas externas -->
+    <line x1="110" y1="70" x2="110" y2="95" class="line-dim" />
+    <line x1="180" y1="70" x2="180" y2="95" class="line-dim" />
+    <line x1="110" y1="90" x2="180" y2="90" class="line-dim" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+  </g>
+
+  <!-- 8. Círculo y Medidor U Inferior -->
+  <g transform="translate(460, 640)">
+    <circle cx="0" cy="0" r="30" class="line-main" />
+    <circle cx="0" cy="0" r="20" class="line-thin" />
+    <line x1="-40" y1="0" x2="40" y2="0" class="line-thin" />
+    <line x1="0" y1="-40" x2="0" y2="40" class="line-thin" />
+    <path d="M -15 -15 L -20 -20 M 15 -15 L 20 -20 M -15 15 L -20 20 M 15 15 L 20 20" class="line-dim" />
+  </g>
+
+  <!-- Pieza en U con escala -->
+  <g transform="translate(560, 595)">
+    <!-- Silueta U -->
+    <path d="M 0 0 L 0 60 C 0 75, 15 90, 35 90 L 85 90 C 105 90, 120 75, 120 60 L 120 0 L 95 0 L 95 55 C 95 65, 85 70, 75 70 L 45 70 C 35 70, 25 65, 25 55 L 25 0 Z" class="line-main" />
+    
+    <!-- Escala (Ticks) -->
+    <line x1="-15" y1="90" x2="135" y2="90" class="line-dim" />
+    <g class="line-dim" transform="translate(60, 70)">
+      <line x1="-25" y1="0" x2="-25" y2="20" />
+      <line x1="-15" y1="0" x2="-15" y2="10" />
+      <line x1="-5" y1="0" x2="-5" y2="10" />
+      <line x1="5" y1="0" x2="5" y2="20" />
+      <line x1="15" y1="0" x2="15" y2="10" />
+      <line x1="25" y1="0" x2="25" y2="10" />
+    </g>
+    <!-- Elemento vertical lateral -->
+    <rect x="140" y="20" width="15" height="40" class="line-thin" />
+    <line x1="140" y1="60" x2="140" y2="95" class="line-dim" />
+  </g>
+
+  <!-- 9. Crosshair Inferior Derecho (Junto al medidor) -->
+  <g transform="translate(860, 640)">
+    <circle cx="0" cy="0" r="35" class="line-main" />
+    <line x1="-50" y1="0" x2="50" y2="0" class="line-thin" />
+    <line x1="0" y1="-50" x2="0" y2="50" class="line-thin" />
+    <!-- Brackets de esquina -->
+    <path d="M -25 -15 L -25 -25 L -15 -25" class="line-dim" />
+    <path d="M 25 -15 L 25 -25 L 15 -25" class="line-dim" />
+    <path d="M -25 15 L -25 25 L -15 25" class="line-dim" />
+    <path d="M 25 15 L 25 25 L 15 25" class="line-dim" />
+  </g>
+
+  <!-- 10. Forma de Onda (Abajo Derecha) -->
+  <g transform="translate(1000, 640)">
+    <line x1="0" y1="0" x2="240" y2="0" class="line-dim" />
+    <path d="M 10 0 L 30 0 L 50 -40 L 70 30 L 95 -60 L 120 45 L 140 -20 L 160 0 L 180 0 L 200 -25 L 220 0 L 240 0" class="line-main" stroke-linejoin="miter" />
+    <line x1="95" y1="-70" x2="95" y2="55" class="line-dashed" />
+    <line x1="50" y1="-50" x2="50" y2="40" class="line-dim" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- EL PERRO CON OJO DE CÁMARA (Abajo Derecha) -->
+  <!-- ========================================== -->
+  <g id="dog-aperture" transform="translate(1040, 620)">
+    <!-- Silueta y rasgos del perro -->
+    <!-- (La path se dibuja de abajo hacia arriba y alrededor de la cabeza) -->
+    <path d="M -90 90 
+             C -90 60, -80 40, -100 20 
+             C -110 10, -125 5, -120 -5
+             C -115 -15, -100 -20, -90 -25 
+             C -80 -30, -70 -50, -80 -80 
+             C -75 -100, -60 -110, -50 -100 
+             C -40 -90, -35 -60, -30 -50 
+             C -20 -60, 0 -80, -5 -110 
+             C 0 -130, 20 -135, 25 -115 
+             C 30 -90, 20 -60, 25 -50 
+             C 35 -40, 50 -20, 65 0 
+             C 75 15, 80 40, 90 60
+             L 100 90 Z" 
+          class="line-main" fill="#1c212a" stroke-width="2.5" />
+          
+    <!-- Detalles internos del rostro (Hocico, orejas, músculos) -->
+    <path d="M -120 -5 Q -100 -5 -80 -15 T -50 -45" class="line-thin" />
+    <path d="M -115 5 Q -90 10 -70 5" class="line-thin" />
+    <path d="M -105 -15 Q -110 -15 -115 -10" class="line-thin" /> <!-- Nariz -->
+    
+    <!-- Detalle oreja izquierda -->
+    <path d="M -70 -70 Q -60 -90 -55 -100" class="line-thin" />
+    <path d="M -45 -90 Q -45 -70 -35 -55" class="line-dim" />
+    
+    <!-- Detalle oreja derecha -->
+    <path d="M -5 -90 Q 5 -110 15 -120" class="line-thin" />
+    <path d="M 15 -100 Q 15 -70 20 -55" class="line-dim" />
+    
+    <!-- Líneas de estructura/pelaje (estilo blueprint) -->
+    <path d="M -20 -10 Q 0 10 15 40" class="line-dim" />
+    <path d="M -50 10 Q -40 30 -30 60" class="line-dim" />
+    <path d="M -80 30 Q -70 50 -60 70" class="line-dim" />
+    <path d="M 30 -30 Q 50 -10 60 20" class="line-dim" />
+
+    <!-- EL OJO / APERTURA (Shutter) -->
+    <g transform="translate(-30, -35)">
+      <!-- Órbita base -->
+      <circle cx="0" cy="0" r="22" class="line-main" fill="#1c212a"/>
+      <circle cx="0" cy="0" r="18" class="line-thin" />
+      
+      <!-- Hojas del diafragma (Aperture blades) -->
+      <!-- Usamos un polígono y líneas que intersectan para el efecto óptico -->
+      <polygon points="0,-12 10,-6 10,6 0,12 -10,6 -10,-6" class="line-main" fill="#2a3a48" />
+      
+      <!-- Líneas de las hojas que forman el iris -->
+      <line x1="0" y1="-12" x2="16" y2="-12" class="line-thin" />
+      <line x1="10" y1="-6" x2="18" y2="8" class="line-thin" />
+      <line x1="10" y1="6" x2="-2" y2="16" class="line-thin" />
+      <line x1="0" y1="12" x2="-16" y2="12" class="line-thin" />
+      <line x1="-10" y1="6" x2="-18" y2="-8" class="line-thin" />
+      <line x1="-10" y1="-6" x2="2" y2="-16" class="line-thin" />
+      
+      <!-- Círculos concéntricos y brillos -->
+      <circle cx="0" cy="0" r="4" class="bg" stroke="#7fa8c7" stroke-width="1.5"/>
+      <circle cx="-5" cy="-5" r="1.5" fill="#7fa8c7" />
+    </g>
+
+    <!-- Líneas de mira técnicas que apuntan al ojo -->
+    <line x1="-30" y1="-95" x2="-30" y2="-65" class="line-dim" />
+    <line x1="-90" y1="-35" x2="-60" y2="-35" class="line-dim" />
+    
+    <!-- Retícula sobre el perro -->
+    <circle cx="-30" cy="-35" r="40" class="line-dashed" opacity="0.5"/>
+  </g>
+
+</svg>

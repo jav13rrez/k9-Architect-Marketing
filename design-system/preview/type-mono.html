@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-mono); padding: 20px; }
+  .specimen { display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; align-items: baseline; gap: 16px; }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #636670; white-space: nowrap; width: 130px; flex-shrink: 0; }
+  .m { font-family: 'JetBrains Mono', monospace; color: #f1f2f4; }
+  .accent { color: #ef4444; }
+  .warn   { color: #f59e0b; }
+  .muted  { color: #909399; }
+  .divider { height: 1px; background: #373a40; margin: 2px 0; }
+  .badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 2px 8px 2px 6px;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .badge-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+  .badge.ok     { background: rgba(16,185,129,.12); color: #10b981; border: 1px solid rgba(16,185,129,.3); }
+  .badge.ok .badge-dot { background: #10b981; }
+  .badge.miss   { background: rgba(245,158,11,.12); color: #f59e0b; border: 1px solid rgba(245,158,11,.3); }
+  .badge.miss .badge-dot { background: #f59e0b; }
+  .badge.off    { background: rgba(144,147,153,.12); color: #909399; border: 1px solid rgba(144,147,153,.3); }
+  .badge.off .badge-dot { background: #636670; }
+  .grid-demo {
+    display: grid; grid-template-columns: repeat(7, 30px); gap: 2px;
+  }
+  .day {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #636670;
+    width: 30px; height: 26px;
+    display: flex; align-items: center; justify-content: center; border-radius: 4px;
+  }
+  .day.active { background: rgba(239,68,68,.15); color: #ef4444; font-weight: 600; }
+  .day.today  { background: #ef4444; color: #fff; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="specimen">
+  <div class="row">
+    <span class="meta">data · 14px · 400</span>
+    <span class="m" style="font-size:14px">K9-2024-0071</span>
+  </div>
+  <div class="row">
+    <span class="meta">data-sm · 12px · 400</span>
+    <span class="m" style="font-size:12px;color:#c1c2c5">Session #0047 · 2024-11-18</span>
+  </div>
+  <div class="row">
+    <span class="meta">data-xs · 11px · italic</span>
+    <span class="m" style="font-size:11px;font-style:italic;color:#636670">Desensitization protocol v3</span>
+  </div>
+  <div class="divider"></div>
+  <div class="row" style="align-items:center">
+    <span class="meta">badge · 10px · 500</span>
+    <div class="badges">
+      <span class="badge ok"><span class="badge-dot"></span>Health OK</span>
+      <span class="badge miss"><span class="badge-dot"></span>Missing</span>
+      <span class="badge off"><span class="badge-dot"></span>Offline</span>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row" style="align-items:flex-start">
+    <span class="meta">calendar · 11px</span>
+    <div class="grid-demo">
+      <span class="day">Mo</span><span class="day">Tu</span><span class="day">We</span><span class="day">Th</span><span class="day">Fr</span><span class="day">Sa</span><span class="day">Su</span>
+      <span class="day muted">11</span><span class="day muted">12</span><span class="day active">13</span><span class="day muted">14</span><span class="day today">15</span><span class="day muted">16</span><span class="day muted">17</span>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="row">
+    <span class="meta">weights · bold</span>
+    <span class="m" style="font-size:13px;font-weight:700;color:#ef4444">700 — Protocol Active</span>
+  </div>
+  <div class="row">
+    <span class="meta">weights · semi</span>
+    <span class="m" style="font-size:13px;font-weight:600;color:#c1c2c5">600 — Session ID</span>
+  </div>
+  <div class="row">
+    <span class="meta">weights · light</span>
+    <span class="m" style="font-size:13px;font-weight:300;color:#636670">300 — Metadata tag</span>
+  </div>
+</div>
+</body>
+</html>

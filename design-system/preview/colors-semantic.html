@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .swatch { display: flex; flex-direction: column; gap: 6px; width: 80px; }
+  .color-block { height: 56px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+  .label { font: var(--data-xs); color: #909399; }
+  .hex   { font: var(--data-xs); color: #636670; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; margin-top: 4px; }
+  .cols { display: flex; gap: 32px; }
+  .col { display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+<div class="cols">
+  <div class="col">
+    <div class="section-label">Green — Success</div>
+    <div class="row">
+      <div class="swatch"><div class="color-block" style="background:#a7f3d0"></div><span class="label">grn-200</span><span class="hex">#a7f3d0</span></div>
+      <div class="swatch"><div class="color-block" style="background:#34d399"></div><span class="label">grn-400</span><span class="hex">#34d399</span></div>
+      <div class="swatch"><div class="color-block" style="background:#10b981; box-shadow: 0 0 0 2px #10b981, 0 0 0 4px rgba(16,185,129,0.3)"></div><span class="label" style="color:#10b981">grn-500 ★</span><span class="hex">#10b981</span></div>
+      <div class="swatch"><div class="color-block" style="background:#059669"></div><span class="label">grn-600</span><span class="hex">#059669</span></div>
+      <div class="swatch"><div class="color-block" style="background:#064e3b"></div><span class="label">grn-900</span><span class="hex">#064e3b</span></div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="section-label">Orange — Warning</div>
+    <div class="row">
+      <div class="swatch"><div class="color-block" style="background:#fde68a"></div><span class="label">org-200</span><span class="hex">#fde68a</span></div>
+      <div class="swatch"><div class="color-block" style="background:#fbbf24"></div><span class="label">org-400</span><span class="hex">#fbbf24</span></div>
+      <div class="swatch"><div class="color-block" style="background:#f59e0b; box-shadow: 0 0 0 2px #f59e0b, 0 0 0 4px rgba(245,158,11,0.3)"></div><span class="label" style="color:#f59e0b">org-500 ★</span><span class="hex">#f59e0b</span></div>
+      <div class="swatch"><div class="color-block" style="background:#d97706"></div><span class="label">org-600</span><span class="hex">#d97706</span></div>
+      <div class="swatch"><div class="color-block" style="background:#78350f"></div><span class="label">org-900</span><span class="hex">#78350f</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

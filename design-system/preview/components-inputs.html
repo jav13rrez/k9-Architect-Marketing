@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .fields { display: flex; flex-direction: column; gap: 12px; max-width: 380px; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field-label { font: 500 12px/1 'Space Grotesk'; color: #c1c2c5; }
+  .field-hint  { font: 400 11px/1 'Space Grotesk'; color: #636670; }
+  .row { display: flex; gap: 8px; }
+</style>
+</head>
+<body>
+<div class="fields">
+  <div class="field">
+    <label class="field-label">Dog Name <span style="color:#ef4444">· active state</span></label>
+    <input class="k9-input k9-focus-ring--bordered" type="text" value="Rex" style="font-family:var(--font-body)">
+    <span class="field-hint">Hover → single 1px red border · focus/active → double border (1px red + halo)</span>
+  </div>
+  <div class="field">
+    <label class="field-label">Session ID</label>
+    <input class="k9-input" type="text" placeholder="K9-YYYY-XXXX" style="font-family:var(--font-mono);font-size:13px">
+  </div>
+  <div class="field">
+    <label class="field-label">Protocol</label>
+    <select class="k9-input" style="font-family:var(--font-body)">
+      <option value="">Select protocol…</option>
+      <option>Counterconditioning DESTR-07</option>
+      <option>Desensitization DS-03</option>
+      <option>Reinforcement Schedule R-12</option>
+    </select>
+  </div>
+  <div class="field">
+    <label class="field-label">Notes</label>
+    <textarea class="k9-input" rows="3" placeholder="Clinical observations…" style="font-family:var(--font-body);resize:vertical"></textarea>
+    <span class="field-hint">Markdown supported</span>
+  </div>
+  <div class="row">
+    <button class="k9-btn k9-btn--primary" style="font-family:var(--font-body)">Save Session</button>
+    <button class="k9-btn k9-btn--outline" style="font-family:var(--font-body)">Cancel</button>
+  </div>
+</div>
+</body>
+</html>

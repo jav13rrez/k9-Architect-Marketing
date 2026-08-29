@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .toggle-row { display: flex; flex-direction: column; gap: 14px; }
+  .toggle-item { display: flex; align-items: center; gap: 14px; }
+  .toggle-label { font: var(--body-sm); color: var(--text-secondary); width: 160px; font-family: var(--font-body); }
+  .toggle-state { font: var(--data-xs); color: #636670; }
+</style>
+</head>
+<body>
+<div class="section-label">Toggle Switches</div>
+<div class="toggle-row">
+  <div class="toggle-item">
+    <label class="k9-toggle">
+      <input type="checkbox" checked>
+      <div class="k9-toggle-track"></div>
+      <div class="k9-toggle-knob"></div>
+    </label>
+    <span class="toggle-label">Notifications enabled</span>
+    <span class="toggle-state">ON — #10b981</span>
+  </div>
+  <div class="toggle-item">
+    <label class="k9-toggle">
+      <input type="checkbox">
+      <div class="k9-toggle-track"></div>
+      <div class="k9-toggle-knob"></div>
+    </label>
+    <span class="toggle-label">Auto-assign sessions</span>
+    <span class="toggle-state">OFF — gray</span>
+  </div>
+  <div class="toggle-item">
+    <label class="k9-toggle">
+      <input type="checkbox" checked>
+      <div class="k9-toggle-track"></div>
+      <div class="k9-toggle-knob"></div>
+    </label>
+    <span class="toggle-label">Health monitoring</span>
+    <span class="toggle-state">ON — #10b981</span>
+  </div>
+  <div class="toggle-item">
+    <label class="k9-toggle">
+      <input type="checkbox">
+      <div class="k9-toggle-track"></div>
+      <div class="k9-toggle-knob"></div>
+    </label>
+    <span class="toggle-label">Dark mode</span>
+    <span class="toggle-state">OFF</span>
+  </div>
+</div>
+</body>
+</html>

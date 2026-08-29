@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 24px; color: #f1f2f4; }
+  .wrap { display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; gap: 14px; min-width: 240px; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; }
+  .field-label { font: 500 12px/1 'Space Grotesk'; color: #c1c2c5; }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .nav { display: flex; flex-direction: column; gap: 6px; background: #1e1f24; border: 1px solid #373a40; border-radius: 8px; padding: 10px 8px; }
+  .ico { width: 16px; height: 16px; flex-shrink: 0; }
+  .spec { font: 400 11px/1.6 'JetBrains Mono'; color: #636670; max-width: 280px; }
+  .state-tag { font: 500 10px/1 'JetBrains Mono'; letter-spacing: 0.08em; text-transform: uppercase; color: #ef4444; }
+  .state-tag.muted { color: #909399; }
+  .mini-card-title { font: 600 13px/1 'Space Grotesk'; color: #f1f2f4; }
+  .mini-card-meta { font: 400 11px/1 'JetBrains Mono'; color: #636670; margin-top: 4px; }
+
+  /* --- Static demo states (so both tiers are visible without a live cursor) --- */
+  /* Hover tier: SINGLE 1px red border only. */
+  .demo-hover { border-color: #ef4444 !important; }
+  /* Active tier: DOUBLE border = 1px red + translucent halo. */
+  .demo-active { border-color: #ef4444 !important; box-shadow: 0 0 0 4px rgba(239,68,68,0.25); }
+  .k9-nav-item.demo-active { background: rgba(239,68,68,0.10); color: #ef4444; }
+  .k9-nav-item.demo-hover { background: #2c2e33; color: #c1c2c5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- TEXT FIELDS -->
+  <div class="col">
+    <div class="section-label">Text Fields</div>
+    <div class="field">
+      <span class="field-label">Default</span>
+      <input class="k9-input" type="text" placeholder="Enter name…">
+    </div>
+    <div class="field">
+      <span class="field-label">Hover <span class="state-tag muted">· single border</span></span>
+      <input class="k9-input demo-hover" type="text" value="Rex">
+    </div>
+    <div class="field">
+      <span class="field-label">Active / Focus <span class="state-tag">· double border</span></span>
+      <input class="k9-input demo-active" type="text" value="Rex">
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="col">
+    <div class="section-label">Cards</div>
+    <div class="k9-card" style="width:220px">
+      <div class="mini-card-title">Default card</div>
+      <div class="mini-card-meta">K9-2024-0071 · resting</div>
+    </div>
+    <div class="k9-card demo-hover" style="width:220px">
+      <div class="mini-card-title">Hover <span class="state-tag muted">· single</span></div>
+      <div class="mini-card-meta">K9-2024-0071 · single border</div>
+    </div>
+    <div class="k9-card demo-active" style="width:220px">
+      <div class="mini-card-title">Active <span class="state-tag">· double</span></div>
+      <div class="mini-card-meta">K9-2024-0071 · selected</div>
+    </div>
+  </div>
+
+  <!-- NAV ITEMS -->
+  <div class="col">
+    <div class="section-label">Menu Items / Links</div>
+    <nav class="nav">
+      <a class="k9-nav-item" href="#">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard <span class="state-tag muted" style="margin-left:auto">· default</span>
+      </a>
+      <a class="k9-nav-item demo-hover" href="#">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Reports <span class="state-tag muted" style="margin-left:auto">· hover</span>
+      </a>
+      <a class="k9-nav-item demo-active" href="#">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Sessions <span class="state-tag" style="margin-left:auto">· active</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- SPEC -->
+  <div class="col" style="min-width:280px">
+    <div class="section-label">Token Spec</div>
+    <div class="spec">
+      TWO TIERS:<br><br>
+      :hover → SINGLE 1px red border<br>
+      &nbsp;&nbsp;border-color: var(--focus-ring-color)<br><br>
+      active / :focus → DOUBLE border<br>
+      &nbsp;&nbsp;border-color: var(--focus-ring-color)<br>
+      &nbsp;&nbsp;box-shadow: var(--focus-halo)<br><br>
+      Tokens:<br>
+      &nbsp;&nbsp;--focus-ring-color: #ef4444<br>
+      &nbsp;&nbsp;--focus-ring-halo:  rgba(239,68,68,.25)<br>
+      &nbsp;&nbsp;--focus-ring-width: 4px<br><br>
+      Helpers:<br>
+      &nbsp;&nbsp;--focus-ring → full double (borderless)<br>
+      &nbsp;&nbsp;--focus-halo → outer band (bordered)<br>
+      &nbsp;&nbsp;.k9-focus-ring--bordered (active)
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

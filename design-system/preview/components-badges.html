@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="section-label">Status Badges</div>
+<div class="row">
+  <span class="k9-badge k9-badge--success" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>HEALTH OK
+  </span>
+  <span class="k9-badge k9-badge--warning" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>MISSING
+  </span>
+  <span class="k9-badge k9-badge--error" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>CRITICAL
+  </span>
+  <span class="k9-badge k9-badge--neutral" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>OFFLINE
+  </span>
+</div>
+<div class="row">
+  <span class="k9-badge k9-badge--success" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>ACTIVE
+  </span>
+  <span class="k9-badge k9-badge--warning" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>PENDING
+  </span>
+  <span class="k9-badge k9-badge--neutral" style="font-family:var(--font-mono)">
+    <span class="k9-badge-dot"></span>INACTIVE
+  </span>
+  <span style="background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.25);font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:9999px;display:inline-flex;align-items:center;gap:5px">
+    <span style="width:5px;height:5px;border-radius:50%;background:#ef4444;flex-shrink:0"></span>ALERT
+  </span>
+</div>
+</body>
+</html>

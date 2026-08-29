@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="section-label">Buttons</div>
+<div class="row">
+  <button class="k9-btn k9-btn--primary" style="font-family:var(--font-body)">Save Protocol</button>
+  <button class="k9-btn k9-btn--outline" style="font-family:var(--font-body)">Refresh</button>
+  <button class="k9-btn k9-btn--ghost" style="font-family:var(--font-body)">Cancel</button>
+  <button class="k9-btn k9-btn--danger" style="font-family:var(--font-body)">Delete Record</button>
+</div>
+<div class="row">
+  <button class="k9-btn k9-btn--primary" style="font-family:var(--font-body);font-size:12px;padding:4px 10px">Save</button>
+  <button class="k9-btn k9-btn--outline" style="font-family:var(--font-body);font-size:12px;padding:4px 10px">Reload</button>
+  <button class="k9-btn k9-btn--outline" style="font-family:var(--font-body);font-size:12px;padding:4px 10px;opacity:0.4;cursor:not-allowed">Disabled</button>
+</div>
+</body>
+</html>

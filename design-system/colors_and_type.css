@@ -1,0 +1,644 @@
+/* ============================================================
+   K9 Behavioral Architect — Design Tokens
+   Colors, Typography, Spacing, Radius, Elevation
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   LOCAL FONT FACES
+   Space Grotesk (body/UI) + JetBrains Mono (data/dense)
+   Files live in fonts/ relative to this stylesheet.
+   ------------------------------------------------------------ */
+
+/* — Space Grotesk — */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* — JetBrains Mono — */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Thin.ttf') format('truetype');
+  font-weight: 100; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-ThinItalic.ttf') format('truetype');
+  font-weight: 100; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-ExtraLight.ttf') format('truetype');
+  font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-LightItalic.ttf') format('truetype');
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-MediumItalic.ttf') format('truetype');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800; font-style: italic; font-display: swap;
+}
+
+/* ------------------------------------------------------------
+   BASE COLOR PRIMITIVES
+   ------------------------------------------------------------ */
+:root {
+  /* Red scale (Primary Brand) */
+  --red-50:  #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;   /* PRIMARY */
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+
+  /* Green scale (Success/Active) */
+  --green-50:  #ecfdf5;
+  --green-100: #d1fae5;
+  --green-200: #a7f3d0;
+  --green-300: #6ee7b7;
+  --green-400: #34d399;
+  --green-500: #10b981;   /* SUCCESS */
+  --green-600: #059669;
+  --green-700: #047857;
+  --green-800: #065f46;
+  --green-900: #064e3b;
+
+  /* Orange scale (Warning) */
+  --orange-50:  #fffbeb;
+  --orange-100: #fef3c7;
+  --orange-200: #fde68a;
+  --orange-300: #fcd34d;
+  --orange-400: #fbbf24;
+  --orange-500: #f59e0b;   /* WARNING */
+  --orange-600: #d97706;
+  --orange-700: #b45309;
+  --orange-800: #92400e;
+  --orange-900: #78350f;
+
+  /* Slate/Gray scale (Neutrals) */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Dark slate (Dashboard-specific neutrals) */
+  --slate-900: #1a1b1e;   /* Dark page BG */
+  --slate-850: #1e1f24;
+  --slate-800: #25262b;   /* Dark card BG */
+  --slate-750: #2c2e33;
+  --slate-700: #373a40;   /* Dark border */
+  --slate-600: #4c4f56;
+  --slate-500: #636670;
+  --slate-400: #909399;
+  --slate-300: #c1c2c5;
+  --slate-200: #e9eaec;
+  --slate-100: #f3f3f3;
+}
+
+/* ------------------------------------------------------------
+   SEMANTIC COLOR TOKENS — DARK MODE (default)
+   ------------------------------------------------------------ */
+:root,
+[data-theme="dark"] {
+  /* Surfaces */
+  --bg-page:         var(--slate-900);      /* #1a1b1e */
+  --bg-card:         var(--slate-800);      /* #25262b */
+  --bg-panel:        var(--slate-800);
+  --bg-sidebar:      var(--slate-850);      /* #1e1f24 */
+  --bg-hover:        var(--slate-750);
+  --bg-elevated:     var(--slate-750);
+
+  /* Borders */
+  --border-subtle:   var(--slate-700);      /* #373a40 */
+  --border-default:  var(--slate-600);
+  --border-strong:   var(--slate-500);
+
+  /* Text */
+  --text-primary:    #f1f2f4;
+  --text-secondary:  var(--slate-300);      /* #c1c2c5 */
+  --text-muted:      var(--slate-400);      /* #909399 */
+  --text-disabled:   var(--slate-500);
+  --text-inverted:   var(--slate-900);
+
+  /* Interactive / Brand */
+  --color-primary:         var(--red-500);         /* #ef4444 */
+  --color-primary-hover:   var(--red-600);
+  --color-primary-muted:   rgba(239, 68, 68, 0.10);
+  --color-primary-border:  rgba(239, 68, 68, 0.30);
+
+  --color-success:         var(--green-500);        /* #10b981 */
+  --color-success-muted:   rgba(16, 185, 129, 0.12);
+  --color-success-border:  rgba(16, 185, 129, 0.30);
+
+  --color-warning:         var(--orange-500);       /* #f59e0b */
+  --color-warning-muted:   rgba(245, 158, 11, 0.12);
+  --color-warning-border:  rgba(245, 158, 11, 0.30);
+
+  --color-error:           var(--red-500);
+  --color-error-muted:     rgba(239, 68, 68, 0.12);
+
+  --color-neutral-muted:   rgba(144, 147, 153, 0.12);
+  --color-neutral-border:  var(--slate-700);
+
+  /* Sidebar active state */
+  --sidebar-active-bg:     var(--color-primary-muted);
+  --sidebar-active-text:   var(--color-primary);
+  --sidebar-inactive-text: var(--slate-400);
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.40);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.50);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.60);
+}
+
+/* ------------------------------------------------------------
+   SEMANTIC COLOR TOKENS — LIGHT MODE
+   ------------------------------------------------------------ */
+[data-theme="light"] {
+  /* Surfaces */
+  --bg-page:         var(--gray-100);       /* #f3f4f6 */
+  --bg-card:         #fefefe;
+  --bg-panel:        #fefefe;
+  --bg-sidebar:      #ffffff;
+  --bg-hover:        var(--gray-50);
+  --bg-elevated:     #ffffff;
+
+  /* Borders */
+  --border-subtle:   #e2e3e4;
+  --border-default:  var(--gray-200);
+  --border-strong:   var(--gray-300);
+
+  /* Text */
+  --text-primary:    var(--gray-900);
+  --text-secondary:  var(--gray-600);
+  --text-muted:      var(--gray-400);
+  --text-disabled:   var(--gray-300);
+  --text-inverted:   #ffffff;
+
+  /* Interactive / Brand — same hues, lighter muted backgrounds */
+  --color-primary:         var(--red-500);
+  --color-primary-hover:   var(--red-600);
+  --color-primary-muted:   rgba(239, 68, 68, 0.07);
+  --color-primary-border:  rgba(239, 68, 68, 0.25);
+
+  --color-success:         var(--green-500);
+  --color-success-muted:   rgba(16, 185, 129, 0.08);
+  --color-success-border:  rgba(16, 185, 129, 0.25);
+
+  --color-warning:         var(--orange-500);
+  --color-warning-muted:   rgba(245, 158, 11, 0.08);
+  --color-warning-border:  rgba(245, 158, 11, 0.25);
+
+  --color-error:           var(--red-500);
+  --color-error-muted:     rgba(239, 68, 68, 0.08);
+
+  --color-neutral-muted:   rgba(107, 114, 128, 0.08);
+  --color-neutral-border:  var(--gray-200);
+
+  /* Sidebar */
+  --sidebar-active-bg:     var(--color-primary-muted);
+  --sidebar-active-text:   var(--color-primary);
+  --sidebar-inactive-text: var(--gray-500);
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.14);
+}
+
+/* ------------------------------------------------------------
+   TYPOGRAPHY
+   ------------------------------------------------------------ */
+:root {
+  /* Font families */
+  --font-body:  'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Font weights */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Type scale */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 14px;
+  --text-md:   15px;
+  --text-lg:   16px;
+  --text-xl:   18px;
+  --text-2xl:  22px;
+  --text-3xl:  28px;
+  --text-4xl:  36px;
+
+  /* Line heights */
+  --lh-tight:   1.2;
+  --lh-snug:    1.35;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ls-tight:    -0.02em;
+  --ls-normal:    0em;
+  --ls-wide:      0.04em;
+  --ls-wider:     0.08em;
+  --ls-widest:    0.12em;
+}
+
+/* Semantic type roles */
+:root {
+  /* Headings — Space Grotesk */
+  --h1: var(--fw-bold) var(--text-4xl)/var(--lh-tight) var(--font-body);
+  --h2: var(--fw-semibold) var(--text-3xl)/var(--lh-tight) var(--font-body);
+  --h3: var(--fw-semibold) var(--text-2xl)/var(--lh-snug) var(--font-body);
+  --h4: var(--fw-semibold) var(--text-xl)/var(--lh-snug) var(--font-body);
+  --h5: var(--fw-medium) var(--text-lg)/var(--lh-snug) var(--font-body);
+  --h6: var(--fw-medium) var(--text-base)/var(--lh-normal) var(--font-body);
+
+  /* Body — Space Grotesk */
+  --body-lg: var(--fw-regular) var(--text-lg)/var(--lh-normal) var(--font-body);
+  --body:    var(--fw-regular) var(--text-base)/var(--lh-normal) var(--font-body);
+  --body-sm: var(--fw-regular) var(--text-sm)/var(--lh-normal) var(--font-body);
+
+  /* Labels — Space Grotesk, medium weight */
+  --label:    var(--fw-medium) var(--text-base)/var(--lh-snug) var(--font-body);
+  --label-sm: var(--fw-medium) var(--text-sm)/var(--lh-snug) var(--font-body);
+  --label-xs: var(--fw-medium) var(--text-xs)/var(--lh-snug) var(--font-body);
+
+  /* Data / Mono — JetBrains Mono */
+  --data:    var(--fw-regular) var(--text-base)/var(--lh-normal) var(--font-mono);
+  --data-sm: var(--fw-regular) var(--text-sm)/var(--lh-normal) var(--font-mono);
+  --data-xs: var(--fw-regular) var(--text-xs)/var(--lh-normal) var(--font-mono);
+
+  /* Badge — JetBrains Mono, spaced uppercase */
+  --badge-text: var(--fw-medium) var(--text-xs)/1 var(--font-mono);
+}
+
+/* ------------------------------------------------------------
+   SPACING SYSTEM
+   ------------------------------------------------------------ */
+:root {
+  --space-0:   0px;
+  --space-1:   2px;
+  --space-2:   4px;
+  --space-3:   6px;
+  --space-4:   8px;
+  --space-5:   10px;
+  --space-6:   12px;
+  --space-7:   14px;
+  --space-8:   16px;
+  --space-10:  20px;
+  --space-12:  24px;
+  --space-16:  32px;
+  --space-20:  40px;
+  --space-24:  48px;
+  --space-32:  64px;
+
+  /* Component-level spacing */
+  --padding-card:    var(--space-12) var(--space-16);  /* 24px 32px → inner */
+  --padding-card-sm: var(--space-8)  var(--space-12);
+  --padding-btn:     var(--space-5)  var(--space-12);
+  --padding-btn-sm:  var(--space-3)  var(--space-8);
+  --padding-badge:   var(--space-1)  var(--space-4) var(--space-1) var(--space-3);
+  --padding-input:   var(--space-5)  var(--space-8);
+}
+
+/* ------------------------------------------------------------
+   BORDER RADIUS
+   ------------------------------------------------------------ */
+:root {
+  --radius-sm:   4px;
+  --radius-md:   8px;   /* DEFAULT for all cards/panels */
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 9999px;   /* Badges, toggles */
+}
+
+/* ------------------------------------------------------------
+   BORDER WIDTH
+   ------------------------------------------------------------ */
+:root {
+  --border-width: 1px;
+}
+
+/* ------------------------------------------------------------
+   FOCUS / ACTIVE BORDER TOKEN   ★ (ref: img1)
+   ------------------------------------------------------------
+   Two-tier highlight for INTERACTIVE elements (text fields,
+   cards, menu items/links):
+
+     :hover            → SINGLE 1px red border only.
+     active / :focus   → DOUBLE border: 1px red inner border +
+                         a wider, semi-transparent red halo.
+
+   Do NOT use thick solid side/top accent borders (forbidden —
+   see CLAUDE.md). This is the only sanctioned emphasis border.
+
+   Helpers:
+     --focus-ring-color → the 1px red border color (use alone on hover).
+     --focus-ring       → full double border. Use on BORDERLESS
+                          elements (nav links, chips) for the ACTIVE
+                          state — paints both the red line and the halo.
+     --focus-halo       → outer translucent band ONLY. Pair with
+                          `border-color: var(--focus-ring-color)` on
+                          elements that already own a 1px border
+                          (inputs, cards) for the ACTIVE state.
+   ------------------------------------------------------------ */
+:root {
+  --focus-ring-color:  var(--red-500);            /* inner 1px red border */
+  --focus-ring-halo:   rgba(239, 68, 68, 0.25);   /* outer translucent band */
+  --focus-ring-width:  4px;                        /* thickness of outer band */
+
+  --focus-ring: 0 0 0 1px var(--focus-ring-color),
+                0 0 0 var(--focus-ring-width) var(--focus-ring-halo);
+  --focus-halo: 0 0 0 var(--focus-ring-width) var(--focus-ring-halo);
+}
+[data-theme="light"] {
+  --focus-ring-halo: rgba(239, 68, 68, 0.18);
+}
+
+/* Reusable utilities — drop on any element to force the state. */
+.k9-focus-ring {                      /* full double border (borderless) */
+  box-shadow:   var(--focus-ring);
+  outline:      none;
+}
+.k9-focus-ring--bordered {            /* for elements with a 1px border */
+  border-color: var(--focus-ring-color) !important;
+  box-shadow:   var(--focus-halo);
+  outline:      none;
+}
+
+/* ------------------------------------------------------------
+   COMPONENT BASE STYLES
+   ------------------------------------------------------------ */
+
+/* Card */
+.k9-card {
+  background:    var(--bg-card);
+  border:        var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding:       var(--padding-card);
+  box-shadow:    var(--shadow-sm);
+  font-family:   var(--font-body);
+  color:         var(--text-primary);
+  transition:    border-color 150ms ease, box-shadow 150ms ease;
+}
+/* Hover → single 1px red border only. */
+.k9-card:hover {
+  border-color: var(--focus-ring-color);
+}
+/* Active / focus → double border (1px red + translucent halo). */
+.k9-card:focus-within,
+.k9-card.is-active {
+  border-color: var(--focus-ring-color);
+  box-shadow:   var(--focus-halo);
+}
+
+/* Badge */
+.k9-badge {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--space-2);
+  font:           var(--badge-text);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  padding:        var(--padding-badge);
+  border-radius:  var(--radius-pill);
+  white-space:    nowrap;
+}
+.k9-badge--success { background: var(--color-success-muted); color: var(--color-success); border: 1px solid var(--color-success-border); }
+.k9-badge--warning { background: var(--color-warning-muted); color: var(--color-warning); border: 1px solid var(--color-warning-border); }
+.k9-badge--error   { background: var(--color-error-muted);   color: var(--color-error);   border: 1px solid var(--color-primary-border); }
+.k9-badge--neutral { background: var(--color-neutral-muted); color: var(--text-secondary); border: 1px solid var(--color-neutral-border); }
+
+.k9-badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.k9-badge--success .k9-badge-dot { background: var(--color-success); }
+.k9-badge--warning .k9-badge-dot { background: var(--color-warning); }
+.k9-badge--error   .k9-badge-dot { background: var(--color-error); }
+.k9-badge--neutral .k9-badge-dot { background: var(--text-muted); }
+
+/* Button — Primary */
+.k9-btn {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--space-4);
+  font:           var(--label);
+  border-radius:  var(--radius-md);
+  border:         1px solid transparent;
+  cursor:         pointer;
+  transition:     background 150ms ease, color 150ms ease, border-color 150ms ease, opacity 150ms ease;
+  padding:        var(--padding-btn);
+  line-height:    1;
+}
+.k9-btn--primary {
+  background:  var(--color-primary);
+  color:       #ffffff;
+  border-color: var(--color-primary);
+}
+.k9-btn--primary:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+
+/* Button — Outline */
+.k9-btn--outline {
+  background:  transparent;
+  color:       var(--text-secondary);
+  border-color: var(--border-default);
+}
+.k9-btn--outline:hover { border-color: var(--border-strong); color: var(--text-primary); }
+
+/* Button — Ghost */
+.k9-btn--ghost {
+  background:  transparent;
+  color:       var(--text-secondary);
+  border-color: transparent;
+}
+.k9-btn--ghost:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+/* Button — Danger */
+.k9-btn--danger {
+  background:  var(--color-error);
+  color:       #ffffff;
+  border-color: var(--color-error);
+}
+.k9-btn--danger:hover { opacity: 0.88; }
+
+/* Input */
+.k9-input {
+  display:       block;
+  width:         100%;
+  font:          var(--body);
+  color:         var(--text-primary);
+  background:    var(--bg-card);
+  border:        1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding:       var(--padding-input);
+  outline:       none;
+  transition:    border-color 150ms ease, box-shadow 150ms ease;
+  font-family:   var(--font-body);
+}
+/* Hover → single 1px red border only. */
+.k9-input:hover {
+  border-color: var(--focus-ring-color);
+}
+/* Focus (active) → double border (1px red + translucent halo). */
+.k9-input:focus {
+  border-color: var(--focus-ring-color);
+  box-shadow: var(--focus-halo);
+}
+.k9-input::placeholder { color: var(--text-muted); }
+
+/* Toggle */
+.k9-toggle {
+  position:   relative;
+  width:      40px;
+  height:     22px;
+  cursor:     pointer;
+}
+.k9-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+.k9-toggle-track {
+  position:      absolute;
+  inset:         0;
+  border-radius: var(--radius-pill);
+  background:    var(--color-neutral-muted);
+  border:        1px solid var(--border-subtle);
+  transition:    background 200ms ease, border-color 200ms ease;
+}
+.k9-toggle input:checked + .k9-toggle-track {
+  background:   var(--color-success);
+  border-color: var(--color-success);
+}
+.k9-toggle-knob {
+  position:      absolute;
+  top:           3px;
+  left:          3px;
+  width:         14px;
+  height:        14px;
+  border-radius: 50%;
+  background:    #fff;
+  box-shadow:    0 1px 3px rgba(0,0,0,0.3);
+  transition:    transform 200ms ease;
+}
+.k9-toggle input:checked ~ .k9-toggle-knob { transform: translateX(18px); }
+
+/* Nav item (sidebar / menu links) */
+.k9-nav-item {
+  display:        flex;
+  align-items:    center;
+  gap:            var(--space-5);
+  padding:        var(--space-4) var(--space-5);
+  border-radius:  var(--radius-sm);
+  border:         1px solid transparent;
+  font:           var(--label-sm);
+  color:          var(--sidebar-inactive-text);
+  text-decoration: none;
+  cursor:         pointer;
+  transition:     background 150ms ease, color 150ms ease,
+                  border-color 150ms ease, box-shadow 150ms ease;
+}
+/* Hover → single 1px red border only. */
+.k9-nav-item:hover {
+  color:        var(--text-secondary);
+  border-color: var(--focus-ring-color);
+}
+/* Active → double border (1px red + translucent halo). */
+.k9-nav-item.active {
+  background:    var(--sidebar-active-bg);
+  color:         var(--sidebar-active-text);
+  border-color:  var(--focus-ring-color);
+  box-shadow:    var(--focus-halo);
+}

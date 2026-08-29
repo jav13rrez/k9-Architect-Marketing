@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 20px; }
+  .cols { display: flex; gap: 32px; flex-wrap: wrap; }
+  .col { display: flex; flex-direction: column; gap: 14px; }
+  .section-label { font: var(--label-xs); color: #636670; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+  .radius-row { display: flex; gap: 10px; align-items: flex-end; }
+  .rbox { background: #25262b; border: 1px solid #373a40; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 6px; gap: 4px; }
+  .rlabel { font: var(--data-xs); color: #636670; text-align: center; }
+  .spacing-row { display: flex; flex-direction: column; gap: 6px; }
+  .sp-item { display: flex; align-items: center; gap: 10px; }
+  .sp-bar { background: #ef4444; height: 10px; border-radius: 2px; opacity: 0.7; }
+  .sp-label { font: var(--data-xs); color: #636670; white-space: nowrap; width: 90px; flex-shrink: 0; }
+  .sp-val { font: var(--data-xs); color: #4c4f56; }
+</style>
+</head>
+<body>
+<div class="cols">
+  <div class="col">
+    <div class="section-label">Border Radius</div>
+    <div class="radius-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+        <div class="rbox" style="width:40px;height:40px;border-radius:4px"></div>
+        <span class="rlabel">sm<br>4px</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+        <div class="rbox" style="width:52px;height:52px;border-radius:8px"></div>
+        <span class="rlabel" style="color:#ef4444">md ★<br>8px</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+        <div class="rbox" style="width:64px;height:64px;border-radius:12px"></div>
+        <span class="rlabel">lg<br>12px</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+        <div class="rbox" style="width:72px;height:72px;border-radius:9999px"></div>
+        <span class="rlabel">pill<br>∞</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="section-label">Spacing Scale</div>
+    <div class="spacing-row">
+      <div class="sp-item"><span class="sp-label">space-2 · 4px</span><div class="sp-bar" style="width:4px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-4 · 8px</span><div class="sp-bar" style="width:8px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-6 · 12px</span><div class="sp-bar" style="width:12px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-8 · 16px</span><div class="sp-bar" style="width:16px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-12 · 24px</span><div class="sp-bar" style="width:24px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-16 · 32px</span><div class="sp-bar" style="width:32px"></div></div>
+      <div class="sp-item"><span class="sp-label">space-24 · 48px</span><div class="sp-bar" style="width:48px"></div></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="section-label">Elevation / Shadow</div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:64px;height:40px;background:#25262b;border-radius:8px;border:1px solid #373a40;box-shadow:0 1px 3px rgba(0,0,0,0.4)"></div>
+        <span style="font:var(--data-xs);color:#636670">shadow-sm · cards</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:64px;height:40px;background:#25262b;border-radius:8px;border:1px solid #373a40;box-shadow:0 4px 12px rgba(0,0,0,0.5)"></div>
+        <span style="font:var(--data-xs);color:#636670">shadow-md · panels</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:64px;height:40px;background:#25262b;border-radius:8px;border:1px solid #373a40;box-shadow:0 8px 24px rgba(0,0,0,0.6)"></div>
+        <span style="font:var(--data-xs);color:#636670">shadow-lg · modals</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

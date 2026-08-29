@@ -1,0 +1,186 @@
+# K9 Behavioral Architect — Design System
+
+## Overview
+
+**K9 Behavioral Architect** is an advanced AI-powered SaaS platform that unifies animal learning theory with clinical behavioral practice. Designed for **elite canine behaviorists and professional trainers**, it digests a high-value scientific corpus, transcripts, and webinar slides to structure, query, and deploy evidence-based behavioral modification protocols.
+
+The product is a **single-surface technical dashboard** — a web application used by professionals who manage dogs, kennels, sessions, and behavioral protocols. Think of it as a command center for clinical canine science.
+
+### Sources
+
+- `uploads/DD-new_design_K9.md` — Design directive document specifying typography, colors, UI element rules, dark/light mode specs, and per-screen prompts.
+- No Figma link or GitHub repo was provided. This design system is built from the design directive document above.
+
+---
+
+## Products
+
+| Surface | Description |
+|---|---|
+| **App (Dashboard)** | Main SaaS product — multi-panel dashboard with sidebar nav, kennel/dog management, session logs, behavioral protocols, health tracking, AI query interface |
+
+UI kit at: `ui_kits/app/`
+
+---
+
+## CONTENT FUNDAMENTALS
+
+### Voice & Tone
+- **Professional, clinical, precise.** This is a tool for experts — not a consumer app. Copy should feel like a well-designed scientific software product, not a pet startup.
+- **Terse and functional.** Labels are short, action-oriented. No fluff, no exclamation marks.
+- **Technical vocabulary is expected.** Terms like "behavioral modification protocol," "desensitization session," "reinforcement schedule," and "counterconditioning" are used without explanation.
+- **No emoji** in UI. Status is communicated through color-coded badges and icons.
+- **No first-person AI voice** ("I think..."). Results are presented factually.
+- **English-first**, but Spanish is present in the design directive (the audience may be bilingual/international).
+
+### Casing
+- **Title Case** for navigation items, section headers, card titles.
+- **Sentence case** for body text, descriptions, table values.
+- **ALL CAPS** for status badges (e.g., "MISSING", "OFFLINE", "OK").
+- **Monospace + uppercase** for kennel IDs, dog tags, session IDs.
+
+### Example Copy Patterns
+- "Health OK" / "MISSING" / "Offline" — status badges
+- "Behavioral Modification Protocol" — section header
+- "Save" / "Refresh" / "Reload" — action buttons
+- "Session Log" / "Kennel Overview" / "Protocol Library" — nav labels
+
+---
+
+## VISUAL FOUNDATIONS
+
+### Color System
+| Role | Hex | Usage |
+|---|---|---|
+| **Primary Red** | `#ef4444` | Brand color — active nav items, primary buttons, selected states, logo accents |
+| **Success Green** | `#10b981` | Health OK badges, active toggles, online status |
+| **Warning Orange** | `#f59e0b` | Missing badges, offline states, alerts |
+| **Dark BG (page)** | `#1a1b1e` | Dark mode page background |
+| **Dark BG (card)** | `#25262b` | Dark mode card/panel backgrounds |
+| **Dark Border** | `#373a40` | Dark mode card borders |
+| **Light BG (page)** | `#f3f4f6` | Light mode page background |
+| **Light BG (card)** | `#fefefe` | Light mode card/panel backgrounds |
+| **Light Border** | `#e2e3e4` | Light mode card borders |
+
+### Typography
+| Role | Font | Usage |
+|---|---|---|
+| **Body / UI** | Space Grotesk | All body text, sidebar labels, nav, paragraphs, general UI labels |
+| **Data / Dense** | JetBrains Mono | Small headers, calendar days, kennel names, data grids, status badges, IDs, dates |
+
+Both fonts are available on Google Fonts (substituted from the design directive; originals assumed to be the same).
+
+### Spacing & Radius
+- **Corner radius:** `8px` (`rounded-lg`) on all cards, containers, panels
+- **Borders:** `1px` solid, very subtle (uses dark/light border tokens)
+- **Sidebar width:** ~220–240px
+- **Card padding:** `16–24px`
+
+### Backgrounds & Depth
+- Two-level depth system: page background is darker than card background in both modes.
+- No full-bleed background images or illustrations.
+- No gradients on backgrounds. Clean flat surfaces.
+- Very subtle `box-shadow` may be used on cards (low elevation).
+
+### Sidebar Navigation
+- Left sidebar: icon + text layout.
+- Active item: red text + `rgba(239,68,68,0.1)` background tint (soft red).
+- Inactive items: muted gray text, no background.
+- Icons: minimalist stroke icons (Lucide/similar).
+
+### Badges & Status Indicators
+- **Pill-shaped** with a tiny colored dot inside.
+- Text is uppercase, monospace font.
+- Colors: green (OK/active), orange (missing/warning), red (critical/error), gray (inactive).
+
+### Buttons
+- **Primary:** Red background (`#ef4444`), white text, `8px` radius.
+- **Secondary/Outline:** Transparent bg, gray text, subtle gray border. Hover changes border/text color.
+- **Destructive:** Red outline or red-filled depending on context.
+
+### Toggles
+- Modern minimalist pill-shaped toggle.
+- **Active:** Emerald green (`#10b981`) track, white knob.
+- **Inactive:** Gray track, white knob.
+
+### Animation & Interactions
+- Minimal animation philosophy — functional transitions only.
+- Hover states: slight opacity change or background tint on interactive elements.
+- No bouncy or playful animations. Smooth, fast transitions (~150ms ease).
+- Sidebar active state uses a soft background fill, not a hard border or underline.
+
+### Dark vs Light Mode
+- Dark mode is the **primary/preferred** mode — this is a technical dashboard.
+- Light mode is a fully supported alternative.
+- Cards always float above the page background in both modes.
+
+### Imagery
+- No decorative photography or illustrations mentioned.
+- Data-driven visualizations (charts, grids, calendars) are the main "imagery."
+- Color of data viz: uses brand primary/success/warning palette.
+
+---
+
+## ICONOGRAPHY
+
+### Approach
+- **Minimalist stroke icons** — consistent with Lucide Icons or similar (24px default, 16px in dense areas).
+- No icon font built into the codebase; icons referenced via CDN (Lucide).
+- No emoji used in UI.
+- No PNG icons found — SVG stroke icons throughout.
+- Icons appear in: sidebar navigation, status badges (dot only, no icon), button prefixes, data table actions.
+
+### Icon System: Lucide Icons
+- CDN: `https://unpkg.com/lucide@latest/dist/umd/lucide.min.js`
+- Usage: `<i data-lucide="dog"></i>` with `lucide.createIcons()`
+- Stroke weight: default (1.5px)
+- Size: 18–20px for sidebar, 14–16px for inline/badge contexts
+
+### Key Icons Used
+| Context | Icon Name |
+|---|---|
+| Dogs / Animals | `dog`, `paw-print` |
+| Kennel / Location | `home`, `map-pin` |
+| Sessions / Calendar | `calendar`, `clock` |
+| Protocols / Science | `flask-conical`, `brain` |
+| Health / Status | `heart-pulse`, `activity` |
+| Settings | `settings` |
+| AI / Query | `bot`, `search` |
+| Users | `user`, `users` |
+| Reports | `bar-chart-2`, `file-text` |
+
+---
+
+## File Index
+
+```
+README.md                     — This file; high-level design system guide
+SKILL.md                      — Agent skill definition for Claude Code
+colors_and_type.css           — CSS custom properties for colors, typography, spacing
+assets/                       — Logos and visual assets
+  logo.svg                    — K9 Behavioral Architect wordmark/logo
+preview/                      — Design System tab cards (registered HTML previews)
+  colors-primary.html         — Primary color palette
+  colors-semantic.html        — Semantic / state colors
+  colors-dark.html            — Dark mode surface tokens
+  colors-light.html           — Light mode surface tokens
+  type-scale.html             — Typography scale (Space Grotesk)
+  type-mono.html              — Monospace type (JetBrains Mono)
+  spacing-radius.html         — Spacing tokens, border radius, borders
+  components-buttons.html     — Button variants
+  components-badges.html      — Status badge variants
+  components-toggles.html     — Toggle switches
+  components-sidebar.html     — Sidebar navigation
+  components-cards.html       — Card containers
+  components-inputs.html      — Form inputs
+ui_kits/
+  app/
+    README.md                 — App UI kit notes
+    index.html                — Full app dashboard prototype
+    Sidebar.jsx               — Navigation sidebar component
+    TopBar.jsx                — Top bar / header component
+    DogCard.jsx               — Dog profile card
+    StatusBadge.jsx           — Status badge component
+    DataTable.jsx             — Data grid component
+    ProtocolCard.jsx          — Behavioral protocol card
+```

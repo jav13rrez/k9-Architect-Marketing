@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e5e6e8; font-family: var(--font-body); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; }
+  .swatch { display: flex; flex-direction: column; gap: 6px; }
+  .color-block { height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+  .label { font: var(--data-xs); color: #6b7280; }
+  .hex   { font: var(--data-xs); color: #9ca3af; }
+  .section-label { font: var(--label-xs); color: #9ca3af; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .wide { width: 120px; }
+  .narrow { width: 72px; }
+</style>
+</head>
+<body>
+<div class="section-label">Light Mode Surfaces</div>
+<div class="row">
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#f3f4f6"></div>
+    <span class="label">bg-page</span>
+    <span class="hex">#f3f4f6 — gray-100</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#ffffff"></div>
+    <span class="label">bg-sidebar</span>
+    <span class="hex">#ffffff — white</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#fefefe"></div>
+    <span class="label">bg-card</span>
+    <span class="hex">#fefefe — near-white</span>
+  </div>
+  <div class="swatch wide">
+    <div class="color-block wide" style="background:#f9fafb"></div>
+    <span class="label">bg-hover</span>
+    <span class="hex">#f9fafb — gray-50</span>
+  </div>
+  <div class="swatch narrow">
+    <div class="color-block narrow" style="background:#e2e3e4"></div>
+    <span class="label">border</span>
+    <span class="hex">#e2e3e4</span>
+  </div>
+  <div class="swatch narrow">
+    <div class="color-block narrow" style="background:#d1d5db"></div>
+    <span class="label">border-strong</span>
+    <span class="hex">#d1d5db</span>
+  </div>
+</div>
+</body>
+</html>

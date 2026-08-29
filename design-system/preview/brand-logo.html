@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f1012; font-family: var(--font-body); padding: 24px; display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+
+  .logo-block {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .logo-bg-dark {
+    background: #1a1b1e; border: 1px solid #373a40; border-radius: 8px;
+    padding: 20px 28px; display: flex; align-items: center; gap: 12px;
+  }
+  .logo-bg-light {
+    background: #f3f4f6; border: 1px solid #e2e3e4; border-radius: 8px;
+    padding: 20px 28px; display: flex; align-items: center; gap: 12px;
+  }
+  .paw {
+    flex-shrink: 0;
+  }
+  .wordmark-k9 { font: 700 22px/1 'Space Grotesk'; letter-spacing: -0.02em; }
+  .wordmark-rest { font: 400 22px/1 'Space Grotesk'; letter-spacing: -0.02em; }
+  .wordmark-sub { font: 600 11px/1 'JetBrains Mono'; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 4px; }
+
+  .label { font: 400 10px/1 'JetBrains Mono'; color: #4c4f56; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+  .divider { width: 1px; background: #373a40; align-self: stretch; }
+</style>
+</head>
+<body>
+
+  <!-- Dark background version -->
+  <div class="logo-block">
+    <div class="logo-bg-dark">
+      <!-- Paw SVG -->
+      <svg class="paw" width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="28" rx="8" ry="9" fill="#ef4444"/>
+        <ellipse cx="10" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="18" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="26" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="34" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="20" cy="28" rx="5" ry="6" fill="#dc2626" opacity="0.5"/>
+      </svg>
+      <div>
+        <div>
+          <span class="wordmark-k9" style="color:#f1f2f4">K9</span>
+          <span class="wordmark-rest" style="color:#909399"> Behavioral</span>
+        </div>
+        <div class="wordmark-sub" style="color:#ef4444">Architect</div>
+      </div>
+    </div>
+    <span class="label">Dark BG</span>
+  </div>
+
+  <!-- Light background version -->
+  <div class="logo-block">
+    <div class="logo-bg-light">
+      <svg class="paw" width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="28" rx="8" ry="9" fill="#ef4444"/>
+        <ellipse cx="10" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="18" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="26" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="34" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="20" cy="28" rx="5" ry="6" fill="#dc2626" opacity="0.4"/>
+      </svg>
+      <div>
+        <div>
+          <span class="wordmark-k9" style="color:#111827">K9</span>
+          <span class="wordmark-rest" style="color:#6b7280"> Behavioral</span>
+        </div>
+        <div class="wordmark-sub" style="color:#ef4444">Architect</div>
+      </div>
+    </div>
+    <span class="label">Light BG</span>
+  </div>
+
+  <!-- Icon only -->
+  <div class="logo-block">
+    <div class="logo-bg-dark" style="padding:20px 24px">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="28" rx="8" ry="9" fill="#ef4444"/>
+        <ellipse cx="10" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="18" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="26" cy="14" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="34" cy="18" rx="4" ry="5" fill="#ef4444"/>
+        <ellipse cx="20" cy="28" rx="5" ry="6" fill="#dc2626" opacity="0.5"/>
+      </svg>
+    </div>
+    <span class="label">Icon mark</span>
+  </div>
+
+</body>
+</html>
